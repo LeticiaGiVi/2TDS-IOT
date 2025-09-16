@@ -27,7 +27,7 @@ Este repositório é uma adaptação do seguinte tutorial: [link](https://docs.g
 
 1. **Clone o repositório:**  
    ```bash
-   git clone https://github.com/arnaldojr/iot-esp32-wokwi-vscode.git
+   https://github.com/prof-atritiack/2TDS-IOT
    ```  
 
 2. **Abra no VSCode:**  
