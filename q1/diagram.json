@@ -12,6 +12,22 @@
       "top": -89.6,
       "left": 264.8,
       "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 23.6, "left": -6.5, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 37.2,
+      "left": 237,
+      "rotate": 90,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 61.55,
+      "left": 172.8,
+      "attrs": { "value": "150" }
     }
   ],
   "connections": [
@@ -26,7 +42,12 @@
     [ "esp:GND.2", "lcd3:GND", "black", [ "v0" ] ],
     [ "esp:22", "lcd3:SCL", "orange", [ "h0" ] ],
     [ "esp:21", "lcd3:SDA", "green", [ "h0" ] ],
-    [ "esp:5V", "lcd3:VCC", "red", [ "h0.15", "v19.2", "h134.4", "v-192" ] ]
+    [ "esp:5V", "lcd3:VCC", "red", [ "h0.15", "v19.2", "h134.4", "v-192" ] ],
+    [ "sw1:2", "esp:GND.1", "black", [ "v0" ] ],
+    [ "esp:14", "sw1:3", "magenta", [ "h0" ] ],
+    [ "esp:4", "r1:1", "green", [ "h0" ] ],
+    [ "r1:2", "led1:A", "green", [ "v0" ] ],
+    [ "esp:GND.3", "led1:C", "black", [ "h57.6", "v28.8" ] ]
   ],
   "dependencies": {}
 }
